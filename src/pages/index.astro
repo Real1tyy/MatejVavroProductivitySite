@@ -1,16 +1,68 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Matej Vavro Productivity">
+	<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-4xl">
+		<header class="text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Matej Vavro</h1>
+			<p class="text-xl md:text-2xl text-[#a0a0a0] font-light">
+				Everything can be further improved — and then some more.
+			</p>
+		</header>
+
+		<main class="space-y-8">
+			<div class="prose prose-invert max-w-none">
+				<p class="text-lg text-[#e5e5e5] leading-relaxed">
+					I talk about Second Brains and modern Personal Knowledge Management systems used for productivity, thinking, and organization.
+				</p>
+
+				<p class="text-lg text-[#e5e5e5] leading-relaxed mt-6">
+					The focus is on software tools that allow you to create clarity, structure, and direction. I cover workflows and strategies that prioritize automation and efficiency with the ultimate end goal of helping you achieve focus, work towards your goals, and achieve meaningful results in times where clarity is everything. If you don't prioritize and actively build your own systems, you will always feel lost and overwhelmed.
+				</p>
+
+				<p class="text-lg text-[#e5e5e5] leading-relaxed mt-6">
+					If you want to get somewhere in life, let's cooperate. Through trial and error, we iterate, continuously improve, and build something magnificent that can stand the test of time in an age of both distraction and incredible opportunity. It truly is a life-or-death filter that separates the successful from the lost.
+				</p>
+
+				<p class="text-lg text-[#e5e5e5] leading-relaxed mt-6 font-semibold">
+					Welcome aboard.
+				</p>
+			</div>
+
+			<div class="text-center my-8">
+				<a
+					href="https://www.youtube.com/@MatejVavroProductivity"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center gap-2 text-[#ff0000] hover:text-[#ff3333] font-semibold text-lg transition-colors"
+				>
+					<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+						<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+					</svg>
+					Watch on YouTube
+				</a>
+			</div>
+
+			<div class="bg-[#1a1a1a] border border-[#333333] rounded-xl p-8 max-w-2xl mx-auto">
+				<h2 class="text-2xl font-semibold text-white mb-2">Stay Updated</h2>
+				<!-- Kit embed will go here -->
+				<div class="min-h-[100px] flex items-center justify-center text-[#666] my-4 border border-dashed border-[#333333] rounded-lg">
+					[Kit Newsletter Form Embed]
+				</div>
+				<p class="text-sm text-[#a0a0a0] italic text-center">
+					No spam. I'll email only when there's something worth your time.
+				</p>
+			</div>
+
+			<div class="text-center mt-12">
+				<a
+					href="/start"
+					class="inline-block px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-[#e5e5e5] transition-colors text-lg"
+				>
+					Start here
+				</a>
+			</div>
+		</main>
+	</div>
+</BaseLayout>

@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { SupportOption } from '../utils/types';
+
+const supportOptions: SupportOption[] = [
+	{
+		name: 'Ko-fi',
+		description: 'One-time support via Ko-fi',
+		url: 'https://ko-fi.com/matejvavro',
+		color: '#FF5E5B',
+		hoverColor: '#ff4440',
+	},
+	{
+		name: 'GitHub Sponsors',
+		description: 'Become a monthly sponsor on GitHub',
+		url: 'https://github.com/sponsors/Real1tyy',
+		color: '#EA4AAA',
+		hoverColor: '#d83a8f',
+	},
+	{
+		name: 'PayPal',
+		description: 'One-time donation via PayPal',
+		url: 'https://paypal.me/Real1tyy',
+		color: '#00457C',
+		hoverColor: '#003a66',
+	},
+	{
+		name: 'Crypto',
+		description: 'Support via cryptocurrency (lowest fees)',
+		url: 'https://nowpayments.io/donation/matejvavro',
+		color: '#4C7BF3',
+		hoverColor: '#3a6ae8',
+	},
+];
+
+const cardanoAddress = 'addr1q9fqww6zfe28lsh2fzlel0x84prye80pwvlh2pj2t52w278npqzfwwkdj0wdnqfdy9u6feyzmcjqvscdxn0fd3hgqmesp82dgv';
+---
+
+<BaseLayout title="Support — Matej Vavro">
+	<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-4xl">
+		<main>
+			<h1 class="text-4xl md:text-5xl font-bold text-white mb-4 text-center">💛 Support My Work</h1>
+			<p class="text-lg text-[#a0a0a0] mb-12 text-center max-w-2xl mx-auto">
+				If you enjoy my plugins or my content, your support helps me continue building better tools for the community.
+			</p>
+
+			<div class="grid gap-6 md:grid-cols-2">
+				{supportOptions.map((option) => (
+					<div class="bg-[#1a1a1a] border border-[#333333] rounded-xl p-6 text-center hover:border-[#444444] transition-colors">
+						<h3 class="text-xl font-semibold text-white mb-3">{option.name}</h3>
+						<p class="text-[#a0a0a0] mb-4 text-sm">{option.description}</p>
+						<a
+							href={option.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-block px-6 py-3 rounded-lg font-semibold text-white transition-colors"
+							style={`background-color: ${option.color};`}
+							onmouseover={`this.style.backgroundColor='${option.hoverColor}'`}
+							onmouseout={`this.style.backgroundColor='${option.color}'`}
+						>
+							{option.name === 'GitHub Sponsors' ? 'Become a Sponsor' : option.name === 'Crypto' ? 'Donate via NOWPayments' : option.name === 'PayPal' ? 'Donate via PayPal' : 'Support on Ko-fi'}
+						</a>
+					</div>
+				))}
+			</div>
+
+			<div class="mt-8 bg-[#252525] border border-[#333333] rounded-xl p-6">
+				<h4 class="text-lg font-semibold text-white mb-3">Direct Cardano (ADA) Support</h4>
+				<p class="text-sm text-[#a0a0a0] mb-3">Lowest fees option:</p>
+				<div class="bg-[#1a1a1a] border border-[#333333] rounded-lg p-4">
+					<code class="text-xs text-[#e5e5e5] break-all font-mono">{cardanoAddress}</code>
+				</div>
+			</div>
+		</main>
+	</div>
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+---
+
+<header class="border-b border-[#333333] bg-[#1a1a1a] sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
+	<nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex items-center justify-between h-16">
+			<a href="/" class="text-xl font-bold text-white hover:text-[#e5e5e5] transition-colors">
+				Matej Vavro
+			</a>
+
+			<div class="hidden md:flex items-center space-x-6">
+				<a href="/" class="text-[#a0a0a0] hover:text-white transition-colors">Home</a>
+				<a href="/start" class="text-[#a0a0a0] hover:text-white transition-colors">Start</a>
+				<a href="/tools" class="text-[#a0a0a0] hover:text-white transition-colors">Tools</a>
+				<a href="/support" class="text-[#a0a0a0] hover:text-white transition-colors">Support</a>
+				<a
+					href="https://www.youtube.com/@MatejVavroProductivity"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-[#ff0000] hover:text-[#ff3333] transition-colors font-semibold"
+				>
+					YouTube
+				</a>
+			</div>
+
+			<!-- Mobile menu button -->
+			<button
+				id="mobile-menu-button"
+				class="md:hidden text-[#a0a0a0] hover:text-white transition-colors"
+				aria-label="Toggle menu"
+			>
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+				</svg>
+			</button>
+		</div>
+
+		<!-- Mobile menu -->
+		<div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+			<a href="/" class="block py-2 text-[#a0a0a0] hover:text-white transition-colors">Home</a>
+			<a href="/start" class="block py-2 text-[#a0a0a0] hover:text-white transition-colors">Start</a>
+			<a href="/tools" class="block py-2 text-[#a0a0a0] hover:text-white transition-colors">Tools</a>
+			<a href="/support" class="block py-2 text-[#a0a0a0] hover:text-white transition-colors">Support</a>
+			<a
+				href="https://www.youtube.com/@MatejVavroProductivity"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="block py-2 text-[#ff0000] hover:text-[#ff3333] transition-colors font-semibold"
+			>
+				YouTube
+			</a>
+		</div>
+	</nav>
+</header>
+
+<script>
+	const mobileMenuButton = document.getElementById('mobile-menu-button');
+	const mobileMenu = document.getElementById('mobile-menu');
+
+	if (mobileMenuButton && mobileMenu) {
+		mobileMenuButton.addEventListener('click', () => {
+			mobileMenu.classList.toggle('hidden');
+		});
+	}
+</script>
