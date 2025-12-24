@@ -2,10 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const githubRepo = 'Real1tyy/Prisma-Calendar';
-const videoId = ''; // Update when available
-const docsUrl = 'https://github.com/Real1tyy/Prisma-Calendar';
+const videoId = 'aULuB6petbU';
+const docsUrl = 'https://real1tyy.github.io/Prisma-Calendar/';
 const githubUrl = `https://github.com/${githubRepo}`;
-const youtubeUrl = 'https://www.youtube.com/@MatejVavroProductivity';
+const youtubeUrl = 'https://www.youtube.com/watch?v=aULuB6petbU';
 ---
 
 <BaseLayout title="Prisma Calendar — Matej Vavro Productivity">
@@ -28,6 +28,7 @@ const youtubeUrl = 'https://www.youtube.com/@MatejVavroProductivity';
 			<!-- Video Embed -->
 			{videoId && (
 				<div class="mb-12">
+					<h2 class="text-2xl font-semibold text-[var(--color-text-purple)] mb-4">Video Tutorial</h2>
 					<div class="aspect-video rounded-lg overflow-hidden">
 						<iframe
 							width="100%"
@@ -42,6 +43,21 @@ const youtubeUrl = 'https://www.youtube.com/@MatejVavroProductivity';
 					</div>
 				</div>
 			)}
+
+			<!-- Documentation Embed -->
+			<div class="mb-12">
+				<h2 class="text-2xl font-semibold text-[var(--color-text-purple)] mb-4">Documentation</h2>
+				<div class="border border-[var(--color-border-purple)] rounded-lg overflow-hidden" style="height: 800px;">
+					<iframe
+						width="100%"
+						height="100%"
+						src={docsUrl}
+						title="Prisma Calendar Documentation"
+						frameborder="0"
+						class="w-full h-full"
+					></iframe>
+				</div>
+			</div>
 
 			<!-- Description -->
 			<div class="bg-[var(--color-surface-purple)] border border-[var(--color-border-purple)] rounded-xl p-8 mb-8">

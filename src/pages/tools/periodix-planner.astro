@@ -5,7 +5,7 @@ const githubRepo = 'Real1tyy/Periodix-Planner';
 const videoId = 'bIVNj6fkTc8';
 const docsUrl = 'https://real1tyy.github.io/Periodix-Planner/';
 const githubUrl = `https://github.com/${githubRepo}`;
-const youtubeUrl = 'https://www.youtube.com/@MatejVavroProductivity';
+const youtubeUrl = 'https://www.youtube.com/watch?v=bIVNj6fkTc8';
 ---
 
 <BaseLayout title="Periodix Planner — Matej Vavro Productivity">
@@ -27,6 +27,7 @@ const youtubeUrl = 'https://www.youtube.com/@MatejVavroProductivity';
 
 			<!-- Video Embed -->
 			<div class="mb-12">
+				<h2 class="text-2xl font-semibold text-[var(--color-text-purple)] mb-4">Video Tutorial</h2>
 				<div class="aspect-video rounded-lg overflow-hidden">
 					<iframe
 						width="100%"
@@ -36,6 +37,21 @@ const youtubeUrl = 'https://www.youtube.com/@MatejVavroProductivity';
 						frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 						allowfullscreen
+						class="w-full h-full"
+					></iframe>
+				</div>
+			</div>
+
+			<!-- Documentation Embed -->
+			<div class="mb-12">
+				<h2 class="text-2xl font-semibold text-[var(--color-text-purple)] mb-4">Documentation</h2>
+				<div class="border border-[var(--color-border-purple)] rounded-lg overflow-hidden" style="height: 800px;">
+					<iframe
+						width="100%"
+						height="100%"
+						src={docsUrl}
+						title="Periodix Planner Documentation"
+						frameborder="0"
 						class="w-full h-full"
 					></iframe>
 				</div>
