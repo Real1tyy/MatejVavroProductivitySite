@@ -36,19 +36,19 @@ const supportOptions: SupportOption[] = [
 const cardanoAddress = 'addr1q9fqww6zfe28lsh2fzlel0x84prye80pwvlh2pj2t52w278npqzfwwkdj0wdnqfdy9u6feyzmcjqvscdxn0fd3hgqmesp82dgv';
 ---
 
-<BaseLayout title="Support — Matej Vavro">
+<BaseLayout title="Support — Matej Vavro Productivity">
 	<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-4xl">
 		<main>
-			<h1 class="text-4xl md:text-5xl font-bold text-white mb-4 text-center">💛 Support My Work</h1>
-			<p class="text-lg text-[#a0a0a0] mb-12 text-center max-w-2xl mx-auto">
+			<h1 class="text-4xl md:text-5xl font-bold text-[var(--color-text-purple)] mb-4 text-center">💛 Support My Work</h1>
+			<p class="text-lg text-[var(--color-text-muted)] mb-12 text-center max-w-2xl mx-auto">
 				If you enjoy my plugins or my content, your support helps me continue building better tools for the community.
 			</p>
 
 			<div class="grid gap-6 md:grid-cols-2">
 				{supportOptions.map((option) => (
-					<div class="bg-[#1a1a1a] border border-[#333333] rounded-xl p-6 text-center hover:border-[#444444] transition-colors">
-						<h3 class="text-xl font-semibold text-white mb-3">{option.name}</h3>
-						<p class="text-[#a0a0a0] mb-4 text-sm">{option.description}</p>
+					<div class="bg-[var(--color-surface-purple)] border border-[var(--color-border-purple)] rounded-xl p-6 text-center hover:border-[var(--color-primary)] transition-colors">
+						<h3 class="text-xl font-semibold text-[var(--color-text-purple)] mb-3">{option.name}</h3>
+						<p class="text-[var(--color-text-muted)] mb-4 text-sm">{option.description}</p>
 						<a
 							href={option.url}
 							target="_blank"
@@ -64,11 +64,11 @@ const cardanoAddress = 'addr1q9fqww6zfe28lsh2fzlel0x84prye80pwvlh2pj2t52w278npqz
 				))}
 			</div>
 
-			<div class="mt-8 bg-[#252525] border border-[#333333] rounded-xl p-6">
-				<h4 class="text-lg font-semibold text-white mb-3">Direct Cardano (ADA) Support</h4>
-				<p class="text-sm text-[#a0a0a0] mb-3">Lowest fees option:</p>
-				<div class="bg-[#1a1a1a] border border-[#333333] rounded-lg p-4">
-					<code class="text-xs text-[#e5e5e5] break-all font-mono">{cardanoAddress}</code>
+			<div class="mt-8 bg-[var(--color-surface-elevated)] border border-[var(--color-border-purple)] rounded-xl p-6">
+				<h4 class="text-lg font-semibold text-[var(--color-text-purple)] mb-3">Direct Cardano (ADA) Support</h4>
+				<p class="text-sm text-[var(--color-text-muted)] mb-3">Lowest fees option:</p>
+				<div class="bg-[var(--color-surface-purple)] border border-[var(--color-border-purple)] rounded-lg p-4">
+					<code class="text-xs text-[var(--color-text)] break-all font-mono">{cardanoAddress}</code>
 				</div>
 			</div>
 		</main>

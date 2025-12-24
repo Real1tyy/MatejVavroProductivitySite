@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const githubRepo = 'Real1tyy/Prisma-Calendar';
+const videoId = ''; // Update when available
+const docsUrl = 'https://github.com/Real1tyy/Prisma-Calendar';
+const githubUrl = `https://github.com/${githubRepo}`;
+const youtubeUrl = 'https://www.youtube.com/@MatejVavroProductivity';
+---
+
+<BaseLayout title="Prisma Calendar — Matej Vavro Productivity">
+	<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl">
+		<main>
+			<!-- Badges -->
+			<div class="flex flex-wrap gap-2 mb-6 justify-center">
+				<img src={`https://img.shields.io/github/downloads/${githubRepo}/total?label=Downloads&style=for-the-badge`} alt="Downloads" />
+				<img src={`https://img.shields.io/github/v/release/${githubRepo}?label=Latest%20Release&style=for-the-badge`} alt="Latest Release" />
+				<img src={`https://img.shields.io/github/stars/${githubRepo}?style=for-the-badge`} alt="Stars" />
+				<img src={`https://img.shields.io/github/license/${githubRepo}?style=for-the-badge`} alt="License" />
+				<img src="https://img.shields.io/badge/obsidian-plugin-purple.svg?style=for-the-badge" alt="Obsidian" />
+			</div>
+
+			<h1 class="text-4xl md:text-5xl font-bold text-[var(--color-text-purple)] mb-4 text-center">Prisma Calendar</h1>
+			<p class="text-lg text-[var(--color-text-muted)] mb-8 text-center max-w-3xl mx-auto">
+				An advanced calendar system for Obsidian that provides powerful scheduling, planning, and time management capabilities. Organize your life with a calendar that integrates seamlessly with your knowledge base.
+			</p>
+
+			<!-- Video Embed -->
+			{videoId && (
+				<div class="mb-12">
+					<div class="aspect-video rounded-lg overflow-hidden">
+						<iframe
+							width="100%"
+							height="100%"
+							src={`https://www.youtube.com/embed/${videoId}`}
+							title="Prisma Calendar Tutorial"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+							class="w-full h-full"
+						></iframe>
+					</div>
+				</div>
+			)}
+
+			<!-- Description -->
+			<div class="bg-[var(--color-surface-purple)] border border-[var(--color-border-purple)] rounded-xl p-8 mb-8">
+				<h2 class="text-2xl font-semibold text-[var(--color-text-purple)] mb-4">About Prisma Calendar</h2>
+				<p class="text-lg text-[var(--color-text-muted)] leading-relaxed mb-4">
+					Prisma Calendar is an advanced calendar system designed specifically for Obsidian users who want powerful scheduling and time management capabilities integrated directly into their knowledge base.
+				</p>
+				<p class="text-lg text-[var(--color-text-muted)] leading-relaxed">
+					With seamless integration into your vault, Prisma Calendar helps you organize your life, plan your schedule, and manage your time effectively while keeping everything connected to your notes and knowledge network.
+				</p>
+			</div>
+
+			<!-- Action Buttons -->
+			<div class="flex flex-wrap gap-4 justify-center">
+				<a
+					href={githubUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="px-6 py-3 bg-[var(--color-primary)] text-white font-semibold rounded-lg hover:bg-[var(--color-primary-light)] transition-colors"
+				>
+					GitHub
+				</a>
+				<a
+					href={docsUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="px-6 py-3 bg-transparent border-2 border-[var(--color-primary)] text-[var(--color-text-purple)] font-semibold rounded-lg hover:bg-[var(--color-primary)] hover:text-white transition-colors"
+				>
+					Documentation
+				</a>
+				<a
+					href={youtubeUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="px-6 py-3 bg-transparent border-2 border-[var(--color-secondary)] text-[var(--color-secondary)] font-semibold rounded-lg hover:bg-[var(--color-secondary)] hover:text-white transition-colors"
+				>
+					YouTube
+				</a>
+			</div>
+		</main>
+	</div>
+</BaseLayout>
