@@ -74,75 +74,107 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				</p>
 			</section> -->
 
-			<section>
-				<h2 class="text-3xl font-semibold text-(--color-text-purple) mb-6">Plugin Overview</h2>
-				<p class="text-lg text-(--color-text-muted) mb-6">
-					My Obsidian plugins are designed to work together as an ecosystem for productivity and knowledge management:
-				</p>
-				<div class="grid gap-6 md:grid-cols-1">
-					<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
-						<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Prisma Calendar</h3>
-						<p class="text-(--color-text-muted) mb-4">Advanced calendar system for Obsidian with powerful scheduling, planning, and time management capabilities.</p>
-						<a href="/tools/prisma-calendar" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
-							Learn more
-							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-							</svg>
-						</a>
-					</div>
-					<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
-						<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Periodix Planner</h3>
-						<p class="text-(--color-text-muted) mb-4">Generate fully interlinked periodic notes (Daily, Weekly, Monthly, Quarterly, Yearly) with Obsidian commands for navigation. Embeds reMarkable PDFs and Activity Watch data to track time and plan ahead.</p>
-						<a href="/tools/periodix-planner" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
-							Learn more
-							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-							</svg>
-						</a>
-					</div>
-					<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
-						<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Nexus Properties</h3>
-						<p class="text-(--color-text-muted) mb-4">Property management system for organizing and connecting your knowledge base. Visualize parent-child relationships with graph and bases views.</p>
-						<a href="/tools/nexus-properties" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
-							Learn more
-							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-							</svg>
-						</a>
-					</div>
-					<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
-						<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Fusion Goals</h3>
-						<p class="text-(--color-text-muted) mb-4">Connect Goals with Tasks and track deadlines with timeline views. Uses Kanban workflow (Inbox, Icebox, Planned, Next Up, In Progress, Done, Archived) with graph and bases visualization. <span class="text-(--color-text-muted-dark) text-sm italic">(Coming Soon)</span></p>
-						<a href="/tools" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
-							Learn more
-							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-							</svg>
-						</a>
-					</div>
-					<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
-						<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Bases Improvements</h3>
-						<p class="text-(--color-text-muted) mb-4">Adds a search bar on top of Obsidian's bases view for quick filtering and navigation. Essential enhancement for working with large knowledge bases.</p>
-						<a href="/tools" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
-							Learn more
-							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-							</svg>
-						</a>
-					</div>
-				</div>
-				<p class="mt-6">
-					<a
-						href="/tools"
-						class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2"
-					>
-						Explore all tools
+		<!-- Obsidian Plugin Ecosystem -->
+		<section>
+			<h2 class="text-3xl font-semibold text-(--color-primary) mb-3">Obsidian Plugin Ecosystem</h2>
+			<p class="text-lg text-(--color-text-muted) mb-6">
+				My Obsidian plugins are designed to work together as an ecosystem for productivity and knowledge management:
+			</p>
+			<div class="grid gap-6 md:grid-cols-1">
+				<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
+					<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Prisma Calendar</h3>
+					<p class="text-(--color-text-muted) mb-4">Advanced calendar system for Obsidian with powerful scheduling, planning, and time management capabilities.</p>
+					<a href="/tools/prisma-calendar" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
+						Learn more
 						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 						</svg>
 					</a>
-				</p>
-			</section>
+				</div>
+				<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
+					<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Periodix Planner</h3>
+					<p class="text-(--color-text-muted) mb-4">Generate fully interlinked periodic notes (Daily, Weekly, Monthly, Quarterly, Yearly) with Obsidian commands for navigation. Embeds reMarkable PDFs and Activity Watch data to track time and plan ahead.</p>
+					<a href="/tools/periodix-planner" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
+						Learn more
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+						</svg>
+					</a>
+				</div>
+				<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
+					<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Nexus Properties</h3>
+					<p class="text-(--color-text-muted) mb-4">Property management system for organizing and connecting your knowledge base. Visualize parent-child relationships with graph and bases views.</p>
+					<a href="/tools/nexus-properties" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
+						Learn more
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+						</svg>
+					</a>
+				</div>
+				<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
+					<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Fusion Goals</h3>
+					<p class="text-(--color-text-muted) mb-4">Connect Goals with Tasks and track deadlines with timeline views. Uses Kanban workflow (Inbox, Icebox, Planned, Next Up, In Progress, Done, Archived) with graph and bases visualization. <span class="text-(--color-text-muted-dark) text-sm italic">(Coming Soon)</span></p>
+					<a href="/tools/fusion-goals" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
+						Learn more
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+						</svg>
+					</a>
+				</div>
+				<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
+					<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Bases Improvements</h3>
+					<p class="text-(--color-text-muted) mb-4">Adds a search bar on top of Obsidian's bases view for quick filtering and navigation. Essential enhancement for working with large knowledge bases.</p>
+					<a href="/tools/bases-improvements" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
+						Learn more
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Remarkable Ecosystem -->
+		<section>
+			<h2 class="text-3xl font-semibold text-(--color-primary) mb-3">Remarkable Ecosystem</h2>
+			<p class="text-lg text-(--color-text-muted) mb-6">
+				Tools for integrating Remarkable tablet with your productivity workflow:
+			</p>
+			<div class="grid gap-6 md:grid-cols-1">
+				<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
+					<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Remarkable ↔ Obsidian Bidirectional Sync</h3>
+					<p class="text-(--color-text-muted) mb-4">Seamlessly sync your Remarkable notes and Obsidian vault in both directions. Journal on Remarkable, read in Obsidian. Write in Obsidian, read on Remarkable. <span class="text-(--color-text-muted-dark) text-sm italic">(Coming Soon)</span></p>
+					<a href="/tools/remarkable-sync" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
+						Learn more
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+						</svg>
+					</a>
+				</div>
+				<div class="bg-(--color-surface-purple) border-l-4 border-(--color-primary) rounded-lg p-6">
+					<h3 class="text-xl font-semibold text-(--color-text-purple) mb-3">Remarkable Periodic Notes Generation</h3>
+					<p class="text-(--color-text-muted) mb-4">Automatically generate daily, weekly, monthly, quarterly, and yearly notes directly in your Remarkable tablet with intelligent tagging for easy navigation. <span class="text-(--color-text-muted-dark) text-sm italic">(Coming Soon)</span></p>
+					<a href="/tools/remarkable-periodic-notes" class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2">
+						Learn more
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<p class="text-center">
+			<a
+				href="/tools"
+				class="text-(--color-text-purple) hover:text-(--color-primary-lighter) font-semibold transition-colors inline-flex items-center gap-2"
+			>
+				Explore all tools
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+				</svg>
+			</a>
+		</p>
 
 			<!-- <div class="bg-(--color-surface-purple) border border-(--color-border-purple) rounded-xl p-8 max-w-2xl mx-auto">
 				<h3 class="text-2xl font-semibold text-(--color-text-purple) mb-2">Stay Updated</h3>
