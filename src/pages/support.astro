@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CopyButton from '../components/CopyButton.astro';
 
 const supportOptions = [
 	{
@@ -34,13 +35,13 @@ const cardanoAddress = 'addr1q9fqww6zfe28lsh2fzlel0x84prye80pwvlh2pj2t52w278npqz
 <BaseLayout title="Support — Matej Vavro Productivity">
 	<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-4xl">
 		<main>
-			<h1 class="text-4xl md:text-5xl font-bold text-(--color-text-purple) mb-4 text-center">Support My Work</h1>
-			<p class="text-lg text-(--color-text-muted) mb-12 text-center max-w-2xl mx-auto">
+			<h1 class="text-4xl md:text-5xl font-bold text-(--color-text-purple) mb-4 text-center reveal">Support My Work</h1>
+			<p class="text-lg text-(--color-text-muted) mb-12 text-center max-w-2xl mx-auto reveal">
 				If you enjoy my plugins or my content, your support helps me continue building better tools for the community.
 			</p>
 
 			<!-- Support Options List -->
-			<div class="bg-(--color-surface-purple) border border-(--color-primary) rounded-xl overflow-hidden mb-8">
+			<div class="bg-(--color-surface-purple) border border-(--color-primary) rounded-xl overflow-hidden mb-8 reveal">
 				{supportOptions.map((option, index) => (
 					<div class={`flex flex-col md:flex-row justify-between items-start md:items-center p-6 gap-4 hover:bg-(--color-surface-elevated) transition-colors ${index !== supportOptions.length - 1 ? 'border-b border-(--color-primary)' : ''}`}>
 						<div class="flex-1">
@@ -51,7 +52,7 @@ const cardanoAddress = 'addr1q9fqww6zfe28lsh2fzlel0x84prye80pwvlh2pj2t52w278npqz
 							href={option.url}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="px-6 py-3 bg-(--color-primary) text-white font-semibold rounded-lg hover:bg-(--color-primary-light) transition-colors whitespace-nowrap"
+							class="px-6 py-3 bg-(--color-primary) text-white font-semibold rounded-lg whitespace-nowrap btn-lift"
 						>
 							{option.buttonText}
 						</a>
@@ -60,21 +61,22 @@ const cardanoAddress = 'addr1q9fqww6zfe28lsh2fzlel0x84prye80pwvlh2pj2t52w278npqz
 			</div>
 
 			<!-- Direct Cardano Support -->
-			<div class="bg-(--color-surface-purple) border border-(--color-primary) rounded-xl p-6 mb-8">
+			<div class="bg-(--color-surface-purple) border border-(--color-primary) rounded-xl p-6 mb-8 reveal">
 				<h4 class="text-xl font-semibold text-white mb-3">Direct Cardano (ADA) Support</h4>
 				<p class="text-sm text-(--color-text-muted) mb-4">Lowest fees option:</p>
-				<div class="bg-(--color-surface-elevated) border border-(--color-primary) rounded-lg p-4">
+				<div class="bg-(--color-surface-elevated) border border-(--color-primary) rounded-lg p-4 mb-4">
 					<code class="text-xs text-(--color-text-muted) break-all font-mono">{cardanoAddress}</code>
 				</div>
+				<CopyButton text={cardanoAddress} label="Copy Address" successMessage="Cardano address copied!" />
 			</div>
 
 			<!-- Contact Section -->
-			<div class="bg-(--color-surface-purple) border border-(--color-primary) rounded-xl p-6 text-center">
+			<div class="bg-(--color-surface-purple) border border-(--color-primary) rounded-xl p-6 text-center reveal">
 				<h4 class="text-xl font-semibold text-white mb-3">Contact</h4>
 				<p class="text-sm text-(--color-text-muted) mb-3">Have questions or need help?</p>
 				<a
 					href="mailto:hello@matejvavroproductivity.com"
-					class="text-(--color-primary) hover:text-(--color-primary-light) transition-colors font-semibold"
+					class="text-(--color-primary) hover:text-(--color-primary-light) transition-all duration-200 font-semibold hover:scale-105 inline-block"
 				>
 					hello@matejvavroproductivity.com
 				</a>

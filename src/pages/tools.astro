@@ -69,17 +69,17 @@ const remarkableTools = [
 <BaseLayout title="Tools — Matej Vavro Productivity">
 	<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl">
 		<main>
-			<h1 class="text-4xl md:text-5xl font-bold text-(--color-text-purple) mb-4">All Tools</h1>
-			<p class="text-lg text-(--color-text-muted) mb-12 max-w-3xl">
+			<h1 class="text-4xl md:text-5xl font-bold text-(--color-text-purple) mb-4 reveal">All Tools</h1>
+			<p class="text-lg text-(--color-text-muted) mb-12 max-w-3xl reveal">
 				Advanced productivity tools designed to work together, helping you build clarity, structure, and direction in your workflow.
 			</p>
 
 			<!-- Obsidian Plugin Ecosystem -->
 			<section class="mb-16">
-				<h2 class="text-3xl font-semibold text-(--color-primary) mb-8">Obsidian Plugin Ecosystem</h2>
+				<h2 class="text-3xl font-semibold text-(--color-primary) mb-8 reveal">Obsidian Plugin Ecosystem</h2>
 				<div class="grid gap-8 md:grid-cols-1">
 					{obsidianTools.map((tool) => (
-						<div class="bg-(--color-surface-purple) border border-(--color-border-purple) rounded-xl p-8 hover:border-(--color-primary) transition-colors">
+						<div class="bg-(--color-surface-purple) border border-(--color-border-purple) rounded-xl p-8 hover:border-(--color-primary) transition-all duration-300 reveal hover:shadow-lg hover:shadow-(--color-primary)/20">
 							<a href={`/tools/${tool.slug}`} class="block">
 								<h3 class="text-2xl md:text-3xl font-semibold text-(--color-text-purple) mb-4 hover:text-(--color-primary-lighter) transition-colors">{tool.name}</h3>
 								<p class="text-lg text-(--color-text-muted) leading-relaxed mb-6">{tool.description}</p>
@@ -90,7 +90,7 @@ const remarkableTools = [
 										href={tool.githubUrl}
 										target="_blank"
 										rel="noopener noreferrer"
-										class="px-6 py-3 bg-(--color-primary) text-white font-semibold rounded-lg hover:bg-(--color-primary-light) transition-colors inline-block"
+										class="px-6 py-3 bg-(--color-primary) text-white font-semibold rounded-lg transition-colors inline-block btn-lift"
 									>
 										GitHub
 									</a>
@@ -100,7 +100,7 @@ const remarkableTools = [
 										href={tool.docsUrl}
 										target="_blank"
 										rel="noopener noreferrer"
-										class="px-6 py-3 bg-transparent border-2 border-(--color-tertiary) text-(--color-tertiary) font-semibold rounded-lg hover:bg-(--color-tertiary) hover:text-white transition-colors inline-block"
+										class="px-6 py-3 bg-transparent border-2 border-(--color-tertiary) text-(--color-tertiary) font-semibold rounded-lg hover:bg-(--color-tertiary) hover:text-white transition-all duration-200 inline-block hover:scale-105"
 									>
 										Docs
 									</a>
@@ -110,7 +110,7 @@ const remarkableTools = [
 										href={tool.youtubeUrl}
 										target="_blank"
 										rel="noopener noreferrer"
-										class="px-6 py-3 bg-transparent border-2 border-(--color-secondary) text-(--color-secondary) font-semibold rounded-lg hover:bg-(--color-secondary) hover:text-white transition-colors inline-block"
+										class="px-6 py-3 bg-transparent border-2 border-(--color-secondary) text-(--color-secondary) font-semibold rounded-lg hover:bg-(--color-secondary) hover:text-white transition-all duration-200 inline-block hover:scale-105"
 									>
 										YouTube
 									</a>
@@ -123,10 +123,10 @@ const remarkableTools = [
 
 			<!-- Remarkable Ecosystem -->
 			<section>
-				<h2 class="text-3xl font-semibold text-(--color-primary) mb-8">Remarkable Ecosystem</h2>
+				<h2 class="text-3xl font-semibold text-(--color-primary) mb-8 reveal">Remarkable Ecosystem</h2>
 				<div class="grid gap-8 md:grid-cols-1">
 					{remarkableTools.map((tool) => (
-						<div class="bg-(--color-surface-purple) border border-(--color-border-purple) rounded-xl p-8 hover:border-(--color-primary) transition-colors">
+						<div class="bg-(--color-surface-purple) border border-(--color-border-purple) rounded-xl p-8 hover:border-(--color-primary) transition-all duration-300 reveal hover:shadow-lg hover:shadow-(--color-primary)/20">
 							<a href={`/tools/${tool.slug}`} class="block">
 								<h3 class="text-2xl md:text-3xl font-semibold text-(--color-text-purple) mb-4 hover:text-(--color-primary-lighter) transition-colors">{tool.name}</h3>
 								<p class="text-lg text-(--color-text-muted) leading-relaxed mb-6">{tool.description}</p>
@@ -135,7 +135,7 @@ const remarkableTools = [
 								<div class="flex flex-wrap gap-4">
 									<a
 										href={`/tools/${tool.slug}`}
-										class="px-6 py-3 bg-(--color-primary) text-white font-semibold rounded-lg hover:bg-(--color-primary-light) transition-colors inline-block"
+										class="px-6 py-3 bg-(--color-primary) text-white font-semibold rounded-lg transition-colors inline-block btn-lift"
 									>
 										Learn More
 									</a>

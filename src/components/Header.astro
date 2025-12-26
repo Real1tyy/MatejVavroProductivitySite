@@ -4,23 +4,23 @@
 <header class="border-b border-(--color-primary) bg-(--color-surface-purple) sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
 	<nav class="container mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-16">
-			<a href="/" class="text-xl font-bold text-white hover:text-(--color-primary-lighter) transition-colors">
+			<a href="/" class="text-xl font-bold text-white hover:text-(--color-primary-lighter) transition-colors" transition:name="site-logo" transition:animate="none">
 				Matej Vavro Productivity
 			</a>
 
 			<div class="hidden md:flex items-center space-x-6">
-				<a href="/" class="text-white hover:text-(--color-primary-lighter) transition-colors">Home</a>
-				<a href="/start" class="text-white hover:text-(--color-primary-lighter) transition-colors">Start</a>
+				<a href="/" class="nav-link text-white hover:text-(--color-primary-lighter)">Home</a>
+				<a href="/start" class="nav-link text-white hover:text-(--color-primary-lighter)">Start</a>
 
 			<!-- Tools Dropdown -->
 			<div class="relative group">
-				<a href="/tools" class="text-white hover:text-(--color-primary-lighter) transition-colors flex items-center">
+				<a href="/tools" class="nav-link text-white hover:text-(--color-primary-lighter) flex items-center">
 					Tools
-					<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 					</svg>
 				</a>
-				<div class="absolute top-full left-0 mt-2 w-56 bg-(--color-surface-purple) border border-(--color-primary) rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+				<div class="absolute top-full left-0 mt-2 w-56 bg-(--color-surface-purple) border border-(--color-primary) rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform group-hover:translate-y-0 -translate-y-2">
 					<a href="/tools" class="block px-4 py-2 text-white hover:text-(--color-primary-lighter) hover:bg-(--color-surface-elevated) transition-colors rounded-t-lg">
 						All Tools
 					</a>
@@ -52,12 +52,12 @@
 				</div>
 			</div>
 
-				<a href="/support" class="text-white hover:text-(--color-primary-lighter) transition-colors">Support</a>
+				<a href="/support" class="nav-link text-white hover:text-(--color-primary-lighter)">Support</a>
 				<a
 					href="https://www.youtube.com/@MatejVavroProductivity?sub_confirmation=1"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-(--color-secondary) hover:text-(--color-secondary-light) transition-colors font-semibold"
+					class="text-(--color-secondary) hover:text-(--color-secondary-light) transition-all duration-200 font-semibold hover:scale-105"
 				>
 					YouTube
 				</a>
@@ -101,12 +101,31 @@
 </header>
 
 <script>
-	const mobileMenuButton = document.getElementById('mobile-menu-button');
-	const mobileMenu = document.getElementById('mobile-menu');
+	function initHeader() {
+		const mobileMenuButton = document.getElementById('mobile-menu-button');
+		const mobileMenu = document.getElementById('mobile-menu');
 
-	if (mobileMenuButton && mobileMenu) {
-		mobileMenuButton.addEventListener('click', () => {
-			mobileMenu.classList.toggle('hidden');
+		if (mobileMenuButton && mobileMenu) {
+			mobileMenuButton.addEventListener('click', () => {
+				mobileMenu.classList.toggle('hidden');
+			});
+		}
+
+		// Add active class to current page nav link
+		const currentPath = window.location.pathname;
+		const navLinks = document.querySelectorAll('.nav-link');
+
+		navLinks.forEach(link => {
+			const href = link.getAttribute('href');
+			if (href === currentPath || (href !== '/' && currentPath.startsWith(href))) {
+				link.classList.add('active');
+			}
 		});
 	}
+
+	// Initialize on page load
+	initHeader();
+
+	// Re-initialize after Astro view transitions
+	document.addEventListener('astro:page-load', initHeader);
 </script>
