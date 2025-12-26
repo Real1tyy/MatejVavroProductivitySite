@@ -39,24 +39,24 @@ const tools: Tool[] = [
 <BaseLayout title="Tools — Matej Vavro Productivity">
 	<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl">
 		<main>
-			<h1 class="text-4xl md:text-5xl font-bold text-[var(--color-text-purple)] mb-4">Obsidian Plugin Ecosystem</h1>
-			<p class="text-lg text-[var(--color-text-muted)] mb-12 max-w-3xl">
+			<h1 class="text-4xl md:text-5xl font-bold text-(--color-text-purple) mb-4">Obsidian Plugin Ecosystem</h1>
+			<p class="text-lg text-(--color-text-muted) mb-12 max-w-3xl">
 				Advanced productivity tools designed to work together, helping you build clarity, structure, and direction in your Second Brain.
 			</p>
 
 			<div class="grid gap-8 md:grid-cols-1">
 				{tools.map((tool) => (
-					<div class="bg-[var(--color-surface-purple)] border border-[var(--color-border-purple)] rounded-xl p-8 hover:border-[var(--color-primary)] transition-colors">
+					<div class="bg-(--color-surface-purple) border border-(--color-border-purple) rounded-xl p-8 hover:border-(--color-primary) transition-colors">
 						<a href={`/tools/${tool.slug}`} class="block">
-							<h2 class="text-2xl md:text-3xl font-semibold text-[var(--color-text-purple)] mb-4 hover:text-[var(--color-primary-lighter)] transition-colors">{tool.name}</h2>
-							<p class="text-lg text-[var(--color-text-muted)] leading-relaxed mb-6">{tool.description}</p>
+							<h2 class="text-2xl md:text-3xl font-semibold text-(--color-text-purple) mb-4 hover:text-(--color-primary-lighter) transition-colors">{tool.name}</h2>
+							<p class="text-lg text-(--color-text-muted) leading-relaxed mb-6">{tool.description}</p>
 						</a>
 						<div class="flex flex-wrap gap-4">
 							<a
 								href={tool.githubUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="px-6 py-3 bg-[var(--color-primary)] text-white font-semibold rounded-lg hover:bg-[var(--color-primary-light)] transition-colors inline-block"
+								class="px-6 py-3 bg-(--color-primary) text-white font-semibold rounded-lg hover:bg-(--color-primary-light) transition-colors inline-block"
 							>
 								GitHub
 							</a>
@@ -65,7 +65,7 @@ const tools: Tool[] = [
 									href={tool.docsUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="px-6 py-3 bg-transparent border-2 border-[var(--color-primary)] text-[var(--color-text-purple)] font-semibold rounded-lg hover:bg-[var(--color-primary)] hover:text-white transition-colors inline-block"
+									class="px-6 py-3 bg-transparent border-2 border-(--color-primary) text-(--color-text-purple) font-semibold rounded-lg hover:bg-(--color-primary) hover:text-white transition-colors inline-block"
 								>
 									Docs
 								</a>
@@ -75,7 +75,7 @@ const tools: Tool[] = [
 									href={tool.youtubeUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="px-6 py-3 bg-transparent border-2 border-[var(--color-secondary)] text-[var(--color-secondary)] font-semibold rounded-lg hover:bg-[var(--color-secondary)] hover:text-white transition-colors inline-block"
+									class="px-6 py-3 bg-transparent border-2 border-(--color-secondary) text-(--color-secondary) font-semibold rounded-lg hover:bg-(--color-secondary) hover:text-white transition-colors inline-block"
 								>
 									YouTube
 								</a>
