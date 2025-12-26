@@ -1,43 +1,49 @@
 ---
 ---
 
-<header class="border-b border-(--color-border-purple) bg-(--color-surface-purple) sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
+<header class="border-b border-(--color-primary) bg-(--color-surface-purple) sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
 	<nav class="container mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-16">
-			<a href="/" class="text-xl font-bold text-(--color-text-purple) hover:text-(--color-primary-lighter) transition-colors">
+			<a href="/" class="text-xl font-bold text-white hover:text-(--color-primary-lighter) transition-colors">
 				Matej Vavro Productivity
 			</a>
 
 			<div class="hidden md:flex items-center space-x-6">
-				<a href="/" class="text-(--color-text-muted) hover:text-(--color-text-purple) transition-colors">Home</a>
-				<a href="/start" class="text-(--color-text-muted) hover:text-(--color-text-purple) transition-colors">Start</a>
+				<a href="/" class="text-white hover:text-(--color-primary-lighter) transition-colors">Home</a>
+				<a href="/start" class="text-white hover:text-(--color-primary-lighter) transition-colors">Start</a>
 
 				<!-- Tools Dropdown -->
 				<div class="relative group">
-					<a href="/tools" class="text-(--color-text-muted) hover:text-(--color-text-purple) transition-colors flex items-center">
+					<a href="/tools" class="text-white hover:text-(--color-primary-lighter) transition-colors flex items-center">
 						Tools
 						<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 						</svg>
 					</a>
-					<div class="absolute top-full left-0 mt-2 w-48 bg-(--color-surface-purple) border border-(--color-border-purple) rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-						<a href="/tools" class="block px-4 py-2 text-(--color-text-muted) hover:text-(--color-text-purple) hover:bg-(--color-surface-elevated) transition-colors rounded-t-lg">
-							All Tools
-						</a>
-						<div class="border-t border-(--color-border-purple)"></div>
-						<a href="/tools/prisma-calendar" class="block px-4 py-2 text-(--color-text-muted) hover:text-(--color-text-purple) hover:bg-(--color-surface-elevated) transition-colors">
-							Prisma Calendar
-						</a>
-						<a href="/tools/periodix-planner" class="block px-4 py-2 text-(--color-text-muted) hover:text-(--color-text-purple) hover:bg-(--color-surface-elevated) transition-colors">
-							Periodix Planner
-						</a>
-						<a href="/tools/nexus-properties" class="block px-4 py-2 text-(--color-text-muted) hover:text-(--color-text-purple) hover:bg-(--color-surface-elevated) transition-colors rounded-b-lg">
-							Nexus Properties
-						</a>
-					</div>
+				<div class="absolute top-full left-0 mt-2 w-48 bg-(--color-surface-purple) border border-(--color-primary) rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+					<a href="/tools" class="block px-4 py-2 text-white hover:text-(--color-primary-lighter) hover:bg-(--color-surface-elevated) transition-colors rounded-t-lg">
+						All Tools
+					</a>
+					<div class="border-t border-(--color-primary)"></div>
+					<a href="/tools/prisma-calendar" class="block px-4 py-2 text-white hover:text-(--color-primary-lighter) hover:bg-(--color-surface-elevated) transition-colors">
+						Prisma Calendar
+					</a>
+					<a href="/tools/periodix-planner" class="block px-4 py-2 text-white hover:text-(--color-primary-lighter) hover:bg-(--color-surface-elevated) transition-colors">
+						Periodix Planner
+					</a>
+				<a href="/tools/nexus-properties" class="block px-4 py-2 text-white hover:text-(--color-primary-lighter) hover:bg-(--color-surface-elevated) transition-colors">
+					Nexus Properties
+				</a>
+				<a href="/tools/fusion-goals" class="block px-4 py-2 text-(--color-text-muted) hover:text-(--color-primary-lighter) hover:bg-(--color-surface-elevated) transition-colors">
+					Fusion Goals <span class="text-xs italic">(Soon)</span>
+				</a>
+				<a href="/tools/bases-improvements" class="block px-4 py-2 text-white hover:text-(--color-primary-lighter) hover:bg-(--color-surface-elevated) transition-colors rounded-b-lg">
+					Bases Improvements
+				</a>
+				</div>
 				</div>
 
-				<a href="/support" class="text-(--color-text-muted) hover:text-(--color-text-purple) transition-colors">Support</a>
+				<a href="/support" class="text-white hover:text-(--color-primary-lighter) transition-colors">Support</a>
 				<a
 					href="https://www.youtube.com/@MatejVavroProductivity?sub_confirmation=1"
 					target="_blank"
@@ -51,7 +57,7 @@
 			<!-- Mobile menu button -->
 			<button
 				id="mobile-menu-button"
-				class="md:hidden text-(--color-text-muted) hover:text-(--color-text-purple) transition-colors"
+				class="md:hidden text-white hover:text-(--color-primary-lighter) transition-colors"
 				aria-label="Toggle menu"
 			>
 				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,15 +68,17 @@
 
 		<!-- Mobile menu -->
 		<div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
-			<a href="/" class="block py-2 text-(--color-text-muted) hover:text-(--color-text-purple) transition-colors">Home</a>
-			<a href="/start" class="block py-2 text-(--color-text-muted) hover:text-(--color-text-purple) transition-colors">Start</a>
-			<a href="/tools" class="block py-2 text-(--color-text-muted) hover:text-(--color-text-purple) transition-colors">Tools</a>
-			<div class="pl-4 space-y-1 border-l-2 border-(--color-border-purple) ml-2">
-				<a href="/tools/prisma-calendar" class="block py-2 text-(--color-text-muted-dark) hover:text-(--color-text-purple) transition-colors text-sm">Prisma Calendar</a>
-				<a href="/tools/periodix-planner" class="block py-2 text-(--color-text-muted-dark) hover:text-(--color-text-purple) transition-colors text-sm">Periodix Planner</a>
-				<a href="/tools/nexus-properties" class="block py-2 text-(--color-text-muted-dark) hover:text-(--color-text-purple) transition-colors text-sm">Nexus Properties</a>
-			</div>
-			<a href="/support" class="block py-2 text-(--color-text-muted) hover:text-(--color-text-purple) transition-colors">Support</a>
+			<a href="/" class="block py-2 text-white hover:text-(--color-primary-lighter) transition-colors">Home</a>
+			<a href="/start" class="block py-2 text-white hover:text-(--color-primary-lighter) transition-colors">Start</a>
+			<a href="/tools" class="block py-2 text-white hover:text-(--color-primary-lighter) transition-colors">Tools</a>
+		<div class="pl-4 space-y-1 border-l-2 border-(--color-primary) ml-2">
+			<a href="/tools/prisma-calendar" class="block py-2 text-(--color-text-muted) hover:text-(--color-primary-lighter) transition-colors text-sm">Prisma Calendar</a>
+			<a href="/tools/periodix-planner" class="block py-2 text-(--color-text-muted) hover:text-(--color-primary-lighter) transition-colors text-sm">Periodix Planner</a>
+		<a href="/tools/nexus-properties" class="block py-2 text-(--color-text-muted) hover:text-(--color-primary-lighter) transition-colors text-sm">Nexus Properties</a>
+		<a href="/tools/fusion-goals" class="block py-2 text-(--color-text-muted-dark) hover:text-(--color-primary-lighter) transition-colors text-sm">Fusion Goals <span class="text-xs italic">(Soon)</span></a>
+		<a href="/tools/bases-improvements" class="block py-2 text-(--color-text-muted) hover:text-(--color-primary-lighter) transition-colors text-sm">Bases Improvements</a>
+		</div>
+			<a href="/support" class="block py-2 text-white hover:text-(--color-primary-lighter) transition-colors">Support</a>
 			<a
 				href="https://www.youtube.com/@MatejVavroProductivity"
 				target="_blank"

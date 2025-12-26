@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const githubRepo = 'Real1tyy/BasesImprovements';
+const docsUrl = 'https://real1tyy.github.io/BasesImprovements/';
+const githubUrl = `https://github.com/${githubRepo}`;
+---
+
+<BaseLayout title="Bases Improvements — Matej Vavro Productivity">
+	<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl">
+		<main>
+			<!-- Badges -->
+			<div class="flex flex-wrap gap-2 mb-6 justify-center">
+				<img src={`https://img.shields.io/github/downloads/${githubRepo}/total?label=Downloads&style=for-the-badge`} alt="Downloads" />
+				<img src={`https://img.shields.io/github/v/release/${githubRepo}?label=Latest%20Release&style=for-the-badge`} alt="Latest Release" />
+				<img src={`https://img.shields.io/github/stars/${githubRepo}?style=for-the-badge`} alt="Stars" />
+				<img src={`https://img.shields.io/github/license/${githubRepo}?style=for-the-badge`} alt="License" />
+				<img src="https://img.shields.io/badge/obsidian-plugin-purple.svg?style=for-the-badge" alt="Obsidian" />
+			</div>
+
+			<h1 class="text-4xl md:text-5xl font-bold text-(--color-primary) mb-4 text-center">Bases Improvements</h1>
+			<p class="text-lg text-(--color-text-muted) mb-8 text-center max-w-3xl mx-auto">
+				Adds a search bar on top of Obsidian's bases view for quick filtering and navigation. Essential enhancement for working with large knowledge bases.
+			</p>
+
+			<!-- Documentation Embed -->
+			<div class="mb-12">
+				<a href={docsUrl} target="_blank" rel="noopener noreferrer" class="text-2xl font-semibold text-(--color-primary) hover:text-(--color-primary-light) mb-4 inline-block transition-colors">
+					Documentation →
+				</a>
+				<div class="border border-(--color-primary) rounded-lg overflow-hidden" style="height: 800px;">
+					<iframe
+						width="100%"
+						height="100%"
+						src={docsUrl}
+						title="Bases Improvements Documentation"
+						frameborder="0"
+						class="w-full h-full"
+					></iframe>
+				</div>
+			</div>
+
+			<!-- Video Coming Soon Notice -->
+			<div class="bg-(--color-surface-purple) border border-(--color-secondary) rounded-xl p-6 mb-8 text-center">
+				<p class="text-(--color-text-muted)">
+					📹 <strong class="text-(--color-secondary)">Video tutorial coming soon</strong> — Check back later for a detailed walkthrough
+				</p>
+			</div>
+
+			<!-- Action Buttons -->
+			<div class="flex flex-wrap gap-4 justify-center">
+				<a
+					href={githubUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="px-6 py-3 bg-(--color-primary) text-white font-semibold rounded-lg hover:bg-(--color-primary-light) transition-colors"
+				>
+					GitHub
+				</a>
+			<a
+				href={docsUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="px-6 py-3 bg-(--color-tertiary) text-white font-semibold rounded-lg hover:bg-(--color-tertiary-light) transition-colors"
+			>
+				Documentation
+			</a>
+			</div>
+		</main>
+	</div>
+</BaseLayout>

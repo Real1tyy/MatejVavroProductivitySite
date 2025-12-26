@@ -20,116 +20,73 @@ const youtubeUrl = 'https://www.youtube.com/watch?v=bIVNj6fkTc8';
 				<img src="https://img.shields.io/badge/obsidian-plugin-purple.svg?style=for-the-badge" alt="Obsidian" />
 			</div>
 
-			<h1 class="text-4xl md:text-5xl font-bold text-(--color-text-purple)] mb-4 text-center">Periodix Planner</h1>
-			<p class="text-lg text-(--color-text-muted)] mb-8 text-center max-w-3xl mx-auto">
+		<h1 class="text-4xl md:text-5xl font-bold text-(--color-primary) mb-4 text-center">Periodix Planner</h1>
+		<p class="text-lg text-(--color-text-muted) mb-8 text-center max-w-3xl mx-auto">
 				Turn Obsidian into a time-aware planning system: automatic periodic notes + time budgets that make trade-offs visible.
 			</p>
 
-			<!-- Video Embed -->
-			<div class="mb-12">
-				<h2 class="text-2xl font-semibold text-(--color-text-purple)] mb-4">Video Tutorial</h2>
-				<div class="aspect-video rounded-lg overflow-hidden">
-					<iframe
-						width="100%"
-						height="100%"
-						src={`https://www.youtube.com/embed/${videoId}`}
-						title="Periodix Planner — Full feature breakdown"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-						class="w-full h-full"
-					></iframe>
-				</div>
+		<!-- Video Embed -->
+		<div class="mb-12">
+			<a href={youtubeUrl} target="_blank" rel="noopener noreferrer" class="text-2xl font-semibold text-(--color-primary) hover:text-(--color-primary-light) mb-4 inline-block transition-colors">
+				Video Tutorial →
+			</a>
+			<div class="aspect-video rounded-lg overflow-hidden">
+				<iframe
+					width="100%"
+					height="100%"
+					src={`https://www.youtube.com/embed/${videoId}`}
+					title="Periodix Planner — Full feature breakdown"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+					class="w-full h-full"
+				></iframe>
 			</div>
+		</div>
 
-			<!-- Documentation Embed -->
-			<div class="mb-12">
-				<h2 class="text-2xl font-semibold text-(--color-text-purple)] mb-4">Documentation</h2>
-				<div class="border border-(--color-border-purple)] rounded-lg overflow-hidden" style="height: 800px;">
-					<iframe
-						width="100%"
-						height="100%"
-						src={docsUrl}
-						title="Periodix Planner Documentation"
-						frameborder="0"
-						class="w-full h-full"
-					></iframe>
-				</div>
+		<!-- Documentation Embed -->
+		<div class="mb-12">
+			<a href={docsUrl} target="_blank" rel="noopener noreferrer" class="text-2xl font-semibold text-(--color-primary) hover:text-(--color-primary-light) mb-4 inline-block transition-colors">
+				Documentation →
+			</a>
+			<div class="border border-(--color-primary) rounded-lg overflow-hidden" style="height: 800px;">
+				<iframe
+					width="100%"
+					height="100%"
+					src={docsUrl}
+					title="Periodix Planner Documentation"
+					frameborder="0"
+					class="w-full h-full"
+				></iframe>
 			</div>
+		</div>
 
-			<!-- Description -->
-			<div class="bg-(--color-surface-purple)] border border-(--color-border-purple)] rounded-xl p-8 mb-8">
-				<h2 class="text-2xl font-semibold text-(--color-text-purple)] mb-4">Why Periodix-Planner exists</h2>
-				<p class="text-lg text-(--color-text-muted)] leading-relaxed mb-4">
-					Time is your scarcest resource. You can't do everything — and most "planning" fails because it avoids the trade-offs.
-				</p>
-				<p class="text-lg text-(--color-text-muted)] leading-relaxed mb-4">
-					<strong class="text-(--color-text-purple)]">Periodix-Planner</strong> helps you plan <em>time</em>, not just tasks. It treats time like a finite investment portfolio:
-				</p>
-				<ul class="list-disc list-inside text-(--color-text-muted)] space-y-2 mb-4">
-					<li>You allocate hours into categories (work, learning, health, relationships, projects)</li>
-					<li>You observe where time actually goes over time</li>
-					<li>You decide whether those investments are worth the returns you're getting</li>
-				</ul>
-				<p class="text-lg text-(--color-text-muted)] leading-relaxed">
-					<strong class="text-(--color-text-purple)]">This plugin is not a task manager.</strong> Tasks are result-oriented. Periodix-Planner is time-oriented. It complements your task manager by helping you decide what deserves your time in the first place.
-				</p>
-			</div>
-
-			<!-- Key Features -->
-			<div class="bg-(--color-surface-purple)] border border-(--color-border-purple)] rounded-xl p-8 mb-8">
-				<h2 class="text-2xl font-semibold text-(--color-text-purple)] mb-4">Key Features</h2>
-				<ul class="space-y-3 text-(--color-text-muted)]">
-					<li class="flex items-start">
-						<span class="text-(--color-text-purple)] mr-2">📅</span>
-						<span><strong class="text-(--color-text-purple)]">Automatic Periodic Note Generation</strong> — Daily, weekly, monthly, quarterly, and yearly notes generated automatically</span>
-					</li>
-					<li class="flex items-start">
-						<span class="text-(--color-text-purple)] mr-2">🔗</span>
-						<span><strong class="text-(--color-text-purple)]">Interconnected Note Web</strong> — All notes linked through frontmatter for seamless navigation</span>
-					</li>
-					<li class="flex items-start">
-						<span class="text-(--color-text-purple)] mr-2">⏱️</span>
-						<span><strong class="text-(--color-text-purple)]">Time Budget System</strong> — Allocate hours across categories with cascading budgets</span>
-					</li>
-					<li class="flex items-start">
-						<span class="text-(--color-text-purple)] mr-2">📊</span>
-						<span><strong class="text-(--color-text-purple)]">Visual Statistics</strong> — Pie charts, tables, and progress bars for time tracking</span>
-					</li>
-					<li class="flex items-start">
-						<span class="text-(--color-text-purple)] mr-2">🎯</span>
-						<span><strong class="text-(--color-text-purple)]">Interactive Allocation Editor</strong> — Drag-to-adjust time allocations with undo/redo</span>
-					</li>
-				</ul>
-			</div>
-
-			<!-- Action Buttons -->
-			<div class="flex flex-wrap gap-4 justify-center">
-				<a
-					href={githubUrl}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="px-6 py-3 bg-(--color-primary)] text-white font-semibold rounded-lg hover:bg-(--color-primary-light)] transition-colors"
-				>
-					GitHub
-				</a>
-				<a
-					href={docsUrl}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="px-6 py-3 bg-transparent border-2 border-(--color-primary)] text-(--color-text-purple)] font-semibold rounded-lg hover:bg-(--color-primary)] hover:text-white transition-colors"
-				>
-					Documentation
-				</a>
-				<a
-					href={youtubeUrl}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="px-6 py-3 bg-transparent border-2 border-(--color-secondary)] text-(--color-secondary)] font-semibold rounded-lg hover:bg-(--color-secondary)] hover:text-white transition-colors"
-				>
-					YouTube
-				</a>
-			</div>
+		<div class="flex flex-wrap gap-4 justify-center">
+			<a
+				href={githubUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="px-6 py-3 bg-(--color-primary) text-white font-semibold rounded-lg hover:bg-(--color-primary-light) transition-colors"
+			>
+				GitHub
+			</a>
+			<a
+				href={docsUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="px-6 py-3 bg-(--color-tertiary) text-white font-semibold rounded-lg hover:bg-(--color-tertiary-light) transition-colors"
+			>
+				Documentation
+			</a>
+			<a
+				href={youtubeUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="px-6 py-3 bg-(--color-secondary) text-white font-semibold rounded-lg hover:bg-(--color-secondary-light) transition-colors"
+			>
+				YouTube
+			</a>
+		</div>
 		</main>
 	</div>
 </BaseLayout>

@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const githubRepo = 'Real1tyy/Fusion-Goals';
+const githubUrl = `https://github.com/${githubRepo}`;
+---
+
+<BaseLayout title="Fusion Goals — Matej Vavro Productivity">
+	<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl">
+		<main>
+			<!-- Badges -->
+			<div class="flex flex-wrap gap-2 mb-6 justify-center">
+				<img src={`https://img.shields.io/github/downloads/${githubRepo}/total?label=Downloads&style=for-the-badge`} alt="Downloads" />
+				<img src={`https://img.shields.io/github/v/release/${githubRepo}?label=Latest%20Release&style=for-the-badge`} alt="Latest Release" />
+				<img src={`https://img.shields.io/github/stars/${githubRepo}?style=for-the-badge`} alt="Stars" />
+				<img src={`https://img.shields.io/github/license/${githubRepo}?style=for-the-badge`} alt="License" />
+				<img src="https://img.shields.io/badge/obsidian-plugin-purple.svg?style=for-the-badge" alt="Obsidian" />
+				<img src="https://img.shields.io/badge/status-coming%20soon-orange.svg?style=for-the-badge" alt="Coming Soon" />
+			</div>
+
+			<h1 class="text-4xl md:text-5xl font-bold text-(--color-primary) mb-4 text-center">Fusion Goals</h1>
+			<p class="text-lg text-(--color-text-muted) mb-8 text-center max-w-3xl mx-auto">
+				Connect Goals with Tasks and track deadlines with timeline views. Uses Kanban workflow with graph and bases visualization.
+			</p>
+
+			<!-- Coming Soon Notice -->
+			<div class="bg-(--color-surface-purple) border-2 border-(--color-primary) rounded-xl p-8 mb-12 text-center">
+				<h2 class="text-3xl font-bold text-(--color-primary) mb-4">🚧 Coming Soon</h2>
+				<p class="text-lg text-(--color-text-muted) mb-4">
+					This plugin is currently in development and not yet ready for public release.
+				</p>
+				<p class="text-(--color-text-muted)">
+					Follow the GitHub repository to get notified when it becomes available.
+				</p>
+			</div>
+
+		<!-- Key Features -->
+		<div class="bg-(--color-surface-purple) border border-(--color-primary) rounded-xl p-8 mb-8">
+			<h2 class="text-2xl font-semibold text-white mb-4">Planned Features</h2>
+			<ul class="space-y-3 text-(--color-text-muted)">
+				<li class="flex items-start">
+					<span class="text-(--color-primary) mr-2">🎯</span>
+					<span><strong class="text-white">Goal-Task Connections</strong> — Link multiple tasks to goals and visualize their relationships</span>
+				</li>
+				<li class="flex items-start">
+					<span class="text-(--color-primary) mr-2">📅</span>
+					<span><strong class="text-white">Timeline Views</strong> — Track deadlines and see which goals are approaching their due dates</span>
+				</li>
+				<li class="flex items-start">
+					<span class="text-(--color-primary) mr-2">🔔</span>
+					<span><strong class="text-white">Deadline Notifications</strong> — Get notified about goals with approaching deadlines</span>
+				</li>
+				<li class="flex items-start">
+					<span class="text-(--color-primary) mr-2">📊</span>
+					<span><strong class="text-white">Graph & Bases Views</strong> — Visualize goal-task relationships using the same powerful views as Nexus Properties</span>
+				</li>
+				<li class="flex items-start">
+					<span class="text-(--color-primary) mr-2">📋</span>
+					<span><strong class="text-white">Kanban Workflow</strong> — Organize tasks by status: Inbox, Icebox, Planned, Next Up, In Progress, Done, Archived</span>
+				</li>
+			</ul>
+		</div>
+
+			<!-- Action Buttons -->
+			<div class="flex flex-wrap gap-4 justify-center">
+				<a
+					href={githubUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="px-6 py-3 bg-(--color-primary) text-white font-semibold rounded-lg hover:bg-(--color-primary-light) transition-colors"
+				>
+					GitHub Repository
+				</a>
+			</div>
+		</main>
+	</div>
+</BaseLayout>

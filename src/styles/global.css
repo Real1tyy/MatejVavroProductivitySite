@@ -16,6 +16,13 @@
 		--color-secondary-dark: #90120c;
 		--color-secondary-darker: #6c0e09;
 
+		/* Blue Tertiary Palette - #1950d7 */
+		--color-tertiary: #1950d7;
+		--color-tertiary-light: #3d6de0;
+		--color-tertiary-lighter: #6189e8;
+		--color-tertiary-dark: #1440b0;
+		--color-tertiary-darker: #0f3089;
+
 		/* Background Colors */
 		--color-bg: #0a0a0a;
 		--color-bg-elevated: #120a1a;
